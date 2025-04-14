@@ -46,22 +46,40 @@ console.log(sconto20)
 const sconto40 = (prezzoTotale * 40) / 100
 console.log(sconto40)
 
+let prezzoFinale = prezzoTotale;
+
+
 // ******* Fine Raccolta dati *******
 
 // ******* Esecuzione logica *******
-console.log("Il costo del tuo biglietto è:")
 
 if(età < 18){
-    console.log(prezzoTotale-sconto20)
+    prezzoFinale = prezzoTotale-sconto20;
 }else if(età >= 65){
-    console.log(prezzoTotale-sconto40)
-}else if(età >= 18){
-    console.log(prezzoTotale)
+    prezzoFinale = prezzoTotale-sconto40;
+}else{
+    prezzoFinale = prezzoTotale
 
 }
+
+let resultNoSconto = `Il prezzo totale del tuo biglietto è: ${prezzoFinale}`
+let resultSconto20 = `Hai diritto ad uno sconto del 20% dovuto all'età, il prezzo finale del tuo biglietto da ${prezzoTotale} sarà ${prezzoFinale}`
+let resultSconto40 = `Hai diritto ad uno sconto del 40% dovuto all'età, il prezzo finale del tuo biglietto da ${prezzoTotale} sarà ${prezzoFinale}`
+
+
 // ******* Fine esecuzione logica *******
 // ******* Output *******
+if(età < 18){
+    console.log(resultSconto20)
+}else if(età >= 65){
+    console.log(resultSconto40)
+}else{
+    console.log(resultNoSconto)
+
+}
 // ******* Fine Output *******
+
+
 
 // ******* Fine script *******
 
