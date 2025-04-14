@@ -24,3 +24,44 @@
 // Output
 // Stampare il prezzo finale.
 
+
+// ******* Izio script *******
+
+// ******* Raccolta dati *******
+const kilometri = prompt("Quanti kilometri devi fare?")
+console.log(kilometri)
+
+const età = prompt("Quanti anni hai?")
+console.log(età)
+
+const unitario = 0.21
+console.log(unitario)
+
+const prezzoTotale = kilometri * unitario
+console.log(prezzoTotale)
+
+const sconto20 = (prezzoTotale * 20) / 100
+console.log(sconto20)
+
+const sconto40 = (prezzoTotale * 40) / 100
+console.log(sconto40)
+
+// ******* Fine Raccolta dati *******
+
+// ******* Esecuzione logica *******
+console.log("Il costo del tuo biglietto è:")
+
+if(età < 18){
+    console.log(prezzoTotale-sconto20)
+}else if(età >= 65){
+    console.log(prezzoTotale-sconto40)
+}else if(età >= 18){
+    console.log(prezzoTotale)
+
+}
+// ******* Fine esecuzione logica *******
+// ******* Output *******
+// ******* Fine Output *******
+
+// ******* Fine script *******
+
