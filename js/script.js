@@ -29,22 +29,22 @@
 
 // ******* Raccolta dati *******
 const kilometri = prompt("Quanti kilometri devi fare?")
-console.log(kilometri)
+// console.log(kilometri)
 
 const età = prompt("Quanti anni hai?")
-console.log(età)
+// console.log(età)
 
 const unitario = 0.21
-console.log(unitario)
+// console.log(unitario)
 
 const prezzoTotale = kilometri * unitario
-console.log(prezzoTotale)
+// console.log(prezzoTotale)
 
 const sconto20 = (prezzoTotale * 20) / 100
-console.log(sconto20)
+// console.log(sconto20)
 
 const sconto40 = (prezzoTotale * 40) / 100
-console.log(sconto40)
+// console.log(sconto40)
 
 let prezzoFinale = prezzoTotale;
 
@@ -62,10 +62,9 @@ if(età < 18){
 
 }
 
-let resultNoSconto = `Il prezzo totale del tuo biglietto è: ${prezzoFinale}`
-let resultSconto20 = `Hai diritto ad uno sconto del 20% dovuto all'età, il prezzo finale del tuo biglietto da ${prezzoTotale} sarà ${prezzoFinale}`
-let resultSconto40 = `Hai diritto ad uno sconto del 40% dovuto all'età, il prezzo finale del tuo biglietto da ${prezzoTotale} sarà ${prezzoFinale}`
-
+let resultNoSconto = `Devi percorrere ${kilometri}Km, per un costo unitario di ${unitario.toFixed(2)}€. Il prezzo finale del tuo biglietto sarà ${prezzoFinale.toFixed(2)}€`
+let resultSconto20 = `Devi percorrere ${kilometri}Km, per un costo unitario di ${unitario.toFixed(2)}€. Hai diritto ad uno sconto del 20% dovuto all'età, il prezzo finale del tuo biglietto da ${prezzoTotale.toFixed(2)}€ sarà ${prezzoFinale.toFixed(2)}€`
+let resultSconto40 = `Devi percorrere ${kilometri}Km, per un costo unitario di ${unitario.toFixed(2)}€. Hai diritto ad uno sconto del 40% dovuto all'età, il prezzo finale del tuo biglietto da ${prezzoTotale.toFixed(2)}€ sarà ${prezzoFinale.toFixed(2)}€`
 
 // ******* Fine esecuzione logica *******
 // ******* Output *******
@@ -79,7 +78,4 @@ if(età < 18){
 }
 // ******* Fine Output *******
 
-
-
 // ******* Fine script *******
-
